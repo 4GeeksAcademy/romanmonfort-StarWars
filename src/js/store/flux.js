@@ -42,8 +42,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getSwapi: (point)=> {
 				fetch(`https://www.swapi.tech/api/${point}`)
 				.then(res => res.json())
-				.then(data => setStore({Swap : data},
-					console.log(data),
+				.then(data => setStore({Swap : data.result},
+					console.log(data.result),
 					localStorage.setItem(`${point}`,JSON.stringify(data.result).toString())))
 				.catch(err => console.error(err))
               
