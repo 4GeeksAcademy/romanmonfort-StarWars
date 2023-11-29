@@ -26,12 +26,13 @@ box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
     height: 600px;
 }
 
-.prueba{
-    
-}
-
 
 .h1:hover{
     color:gold;
     
+}
+
+.star{
+    color: gold;
+
 }
