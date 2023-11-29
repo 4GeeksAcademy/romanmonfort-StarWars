@@ -14,6 +14,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			Swapi: [],
+			Films: [],
+			Planets: [],
+			Starships: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -39,15 +42,55 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			getSwapi: (point)=> {
-				fetch(`https://www.swapi.tech/api/${point}`)
-				.then(res => res.json())
-				.then(data => setStore({Swap : data.result},
-					console.log(data.result),
-					localStorage.setItem(`${point}`,JSON.stringify(data.result).toString())))
-				.catch(err => console.error(err))
-              
-			}
+			getFilms: async () => {
+				try {
+				  const response = await fetch(`https://www.swapi.tech/api/films`);
+				  const data = await response.json();
+			  
+				  setStore({
+					Films: data.result
+				  });
+			  
+				  console.log(data.result);
+			  
+				  localStorage.setItem(`Films`, JSON.stringify(data.result));
+				} catch (err) {
+				  console.error(err);
+				}
+			  },
+			getStarships: async () => {
+				try {
+				  const response = await fetch(`https://www.swapi.tech/api/starships/`);
+				  const data = await response.json();
+			  
+				  setStore({
+					Starships: data.results
+				  });
+			  
+				  console.log(data.results);
+			  
+				  localStorage.setItem(`Starships`, JSON.stringify(data.results));
+				} catch (err) {
+				  console.error(err);
+				}
+			  },
+			  
+			  getPlanets: async () => {
+				try {
+				  const response = await fetch(`https://www.swapi.tech/api/planets/`);
+				  const data = await response.json();
+			  
+				  setStore({
+					Planets: data.results
+				  });
+			  
+				  console.log(data.results);
+			  
+				  localStorage.setItem(`Planets`, JSON.stringify(data.results));
+				} catch (err) {
+				  console.error(err);
+				}
+			  }
 		}
 	};
 };

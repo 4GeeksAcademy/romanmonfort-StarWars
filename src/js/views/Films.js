@@ -10,9 +10,11 @@ const Films = () => {
 
   return (
     <div className='container'>
-    {store.swapi && store.swapi.map((movie, index) => (
-      <FilmCard key={index} title={movie.properties.title} />
+    {store.Planets && store.Planets.map((movie, index) => (
+      <FilmCard key={index} title={movie.name} />
+      
     ))}
+      
   </div>
   )
 }
