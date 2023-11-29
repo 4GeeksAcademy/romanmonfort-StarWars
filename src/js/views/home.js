@@ -9,7 +9,7 @@ export const Home = () => (
 				<Link className="text-decoration-none" to='/films'><div className="text-white"><h1 className="h1">FILMS</h1></div></Link>
 			</div>
 			<div className="people col-12 col-sm bloque m-2  d-flex align-items-center justify-content-center">
-				<Link className="text-decoration-none" to='/films'><div className="text-white"><h1 className="h1">PEOPLE</h1></div></Link>
+				<Link className="text-decoration-none" to='/characters'><div className="text-white"><h1 className="h1">PEOPLE</h1></div></Link>
 			</div>
 			<div className="col-12 col-sm bloque planets m-2 d-flex align-items-center justify-content-center">
 				<Link className="text-decoration-none" to='/demo'><div className="text-white"><h1 className="h1">PLANETS</h1></div></Link>

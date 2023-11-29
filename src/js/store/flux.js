@@ -17,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			Films: [],
 			Planets: [],
 			Starships: [],
+			Characters: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -90,7 +91,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (err) {
 				  console.error(err);
 				}
-			  }
+			  },
+			  getCharacters: async () => {
+				try {
+				  const response = await fetch(`https://www.swapi.tech/api/characters/`);
+				  const data = await response.json();
+			  
+				  setStore({
+					Characters: data.results
+				  });
+			  
+				  console.log(data.results);
+			  
+				  localStorage.setItem(`Characters`, JSON.stringify(data.results));
+				} catch (err) {
+				  console.error(err);
+				}
+			  },
 		}
 	};
 };

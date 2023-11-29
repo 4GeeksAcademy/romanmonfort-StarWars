@@ -9,12 +9,14 @@ const Films = () => {
  
 
   return (
-    <div className='container row '>
+    <div className="container">
+      <div className=' row '>
     {store.Films && store.Films.map((movie, index) => (
-      <FilmCard key={index} name={movie.properties.title} uid={movie.uid} />
-      
+      <FilmCard key={index} name={movie.properties.title} uid={movie.uid} />     
     ))}    
   </div>
+    </div>
+    
   )
 
 }

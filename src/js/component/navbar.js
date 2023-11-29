@@ -12,7 +12,7 @@ export const Navbar = () => {
 				<span className="navbar-brand mb-0 h1 text-white">SPECIES </span>
 			</Link>
 			<h2 className="star">STAR WARS</h2>
-			<Link to="/" className="text-decoration-none">
+			<Link to="/starships" className="text-decoration-none">
 				<span className="navbar-brand mb-0 h1 text-white">STARSHIPS </span>
 			</Link>
 			<Link to="/" className="text-decoration-none">
