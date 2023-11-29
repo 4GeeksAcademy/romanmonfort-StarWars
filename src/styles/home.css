@@ -2,6 +2,8 @@
     -webkit-box-shadow:0px 0px 31px 7px rgba(45,255,196,0.9);
 -moz-box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
 box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
+transform: scale(1.05); 
+cursor: zoom-in;
 }
 
 .films{
@@ -24,6 +26,7 @@ box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
     box-shadow: 0 4px 10px rgba(246, 5, 5, 0.1);
     padding: 20px;
     height: 600px;
+    transition: transform 0.3s ease;
 }
 
 
