@@ -9,14 +9,14 @@ const Films = () => {
  
 
   return (
-    <div className='container'>
-    {store.Planets && store.Planets.map((movie, index) => (
-      <FilmCard key={index} title={movie.name} />
+    <div className='container row '>
+    {store.Films && store.Films.map((movie, index) => (
+      <FilmCard key={index} name={movie.properties.title} uid={movie.uid} />
       
-    ))}
-      
+    ))}    
   </div>
   )
+
 }
 
 export default Films

@@ -39,3 +39,16 @@ cursor: zoom-in;
     color: gold;
 
 }
+
+.planetCard{
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(246, 5, 5, 0.1);
+    background-color:black;
+    transition: transform 0.3s ease;
+}
+
+.planetCard:hover{
+    border: solid gold;
+    transform: scale(1.05); 
+cursor: zoom-in;
+}
