@@ -12,7 +12,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			Swapi: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -37,6 +38,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			getSwapi: (point)=> {
+				fetch(`https://www.swapi.tech/api/${point}`)
+				.then(res => res.json())
+				.then(data => setStore({Swap : data},
+					console.log(data),
+					localStorage.setItem(`${point}`,JSON.stringify(data.result).toString())))
+				.catch(err => console.error(err))
+              
 			}
 		}
 	};

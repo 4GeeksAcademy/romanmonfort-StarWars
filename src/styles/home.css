@@ -1,0 +1,37 @@
+.bloque:hover{
+    -webkit-box-shadow:0px 0px 31px 7px rgba(45,255,196,0.9);
+-moz-box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
+box-shadow: 0px 0px 31px 7px rgba(45,255,196,0.9);
+}
+
+.films{
+    background-image: url(https://images.unsplash.com/photo-1591255347692-01f53b582e6d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover;  
+}
+
+.people{
+    background-image: url(https://images.unsplash.com/photo-1617799890023-c7b03d079b1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0YXJ3YXJzfGVufDB8fDB8fHww);
+    background-size:cover; 
+}
+
+.planets{
+    background-image: url(https://img1.wallspic.com/previews/1/4/9/3941/3941-objeto_astronomico-espacio_de_arte-la_ciencia_ficcion-via_lactea-espacio-x750.jpg);
+    background-size:cover; 
+}
+
+.bloque{
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(246, 5, 5, 0.1);
+    padding: 20px;
+    height: 600px;
+}
+
+.prueba{
+    
+}
+
+
+.h1:hover{
+    color:gold;
+    
+}
