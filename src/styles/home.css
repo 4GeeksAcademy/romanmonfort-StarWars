@@ -53,3 +53,96 @@ cursor: zoom-in;
 cursor: zoom-in;
 }
 
+.Btnt {
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+  }
+  
+  .Btnt::before {
+    position: absolute;
+    content: "FAVORITE";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+  }
+  
+  .Btnt:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btnt:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btnt:active {
+    transform: scale(0.95);
+  }
+
+  .BtnM {
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#770a0a,#ffa977,#770a0a,#77270a,#ff7777,#77390a);
+    background-size: 250%;
+    background-position: left;
+    color: #e23434;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+  }
+  
+  .BtnM::before {
+    position: absolute;
+    content: "MORE INFO";
+    color: #ff7777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+  }
+  
+  .BtnM:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .BtnM:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .BtnM:active {
+    transform: scale(0.95);
+  }

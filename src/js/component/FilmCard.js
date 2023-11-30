@@ -10,8 +10,8 @@ const FilmCard = (props) => {
                     <h5 className="card-title text-white">{props.name}</h5>
                 </div>
                 <div className="card-body row d-flex justify-content-between">
-                    <Link className="card-link text-decoration-none col p-0"><button className='btn btn-warning  ms-3'>FAVORITE</button></Link>
-                    <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end"><button className='btn btn-primary  me-3'>MORE INFO</button></Link>
+                    <Link className="card-link text-decoration-none col p-0"><button className='Btnt   ms-3'></button></Link>
+                    <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end"><button className='BtnM   me-3'></button></Link>
                 </div>
             </div>
         </div>
