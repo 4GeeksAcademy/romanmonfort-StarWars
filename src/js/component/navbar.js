@@ -11,7 +11,9 @@ export const Navbar = () => {
 			<Link to="/" className="text-decoration-none">
 				<span className="navbar-brand mb-0 h1 text-white">SPECIES </span>
 			</Link>
-			<h2 className="star">STAR WARS</h2>
+			<Link to="/" className="text-decoration-none star">
+				<h1 className=" mb-0  star">STAR WARS </h1>
+			</Link>
 			<Link to="/starships" className="text-decoration-none">
 				<span className="navbar-brand mb-0 h1 text-white">STARSHIPS </span>
 			</Link>

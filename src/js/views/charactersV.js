@@ -11,8 +11,8 @@ export const CharactersV = () => {
 	return (
 		<div className="container">
 			<div className='row'>
-				{store.Characters && store.Characters.map((planet, index) => (
-					<Characters key={index} name={planet.name} uid={planet.uid} />
+				{store.Characters && store.Characters.map((people, index) => (
+					<Characters key={index} name={people.name} uid={people.uid} />
 				))}
 
 			</div>
