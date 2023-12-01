@@ -12,6 +12,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Films from "./views/Films";
 import { CharactersV } from "./views/charactersV";
+import InfoView from "./views/InfoView";
 
 
 //create your first component
@@ -32,6 +33,7 @@ const Layout = () => {
 						<Route path="/films" element={<Films/>}/>
 						<Route path="*" element={<h1>Not found!</h1>} />
 						<Route path="/characters" element={<CharactersV/>} />
+						<Route path="/info/:type/:id" element={<InfoView/>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>

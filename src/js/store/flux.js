@@ -13,11 +13,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			Swapi: [],
+			Favorites:[],
 			Films: [],
 			Planets: [],
 			Starships: [],
 			Characters: [],
+			Info: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -104,6 +105,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  console.log(data.results);
 			  
 				  localStorage.setItem(`Characters`, JSON.stringify(data.results));
+				} catch (err) {
+				  console.error(err);
+				}
+			  },
+			  getInfo: async (url) => {
+				try {
+				  const response = await fetch(url);
+				  const data = await response.json();
+			  
+				  setStore({
+					Info: data.result.properties
+				  });
+			  
+				  console.log(data.result);
+			  
+				  localStorage.setItem(`Info`, JSON.stringify(data.result));
 				} catch (err) {
 				  console.error(err);
 				}

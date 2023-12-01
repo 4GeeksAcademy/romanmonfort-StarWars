@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
+import { Context } from '../store/appContext'
 
 const CardPlanet = (props) => {
+    const { store, actions } = useContext(Context);
+
     return (
         <div className='col m-2 '>
             <div className="card planetCard" style={{ width: '18rem' }}>
@@ -13,7 +16,7 @@ const CardPlanet = (props) => {
                 </div>
                 <div className="card-body row d-flex justify-content-between">
                     <Link className="card-link text-decoration-none col p-0"><button className='Btnt '></button></Link>
-                    <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end"><button className='BtnM '></button></Link>
+                    <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end " to={`/info/planets/${props.uid}`} ><button onClick={() => actions.getInfo(props.url)} className='BtnM '></button></Link>
                 </div>
             </div>
         </div>

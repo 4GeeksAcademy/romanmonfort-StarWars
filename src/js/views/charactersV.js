@@ -12,7 +12,7 @@ export const CharactersV = () => {
 		<div className="container">
 			<div className='row'>
 				{store.Characters && store.Characters.map((people, index) => (
-					<Characters key={index} name={people.name} uid={people.uid} />
+					<Characters key={index} name={people.name} uid={people.uid} url={people.url}/>
 				))}
 
 			</div>

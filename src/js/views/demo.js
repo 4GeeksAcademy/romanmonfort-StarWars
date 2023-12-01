@@ -12,7 +12,7 @@ export const Demo = () => {
 		<div className="container">
 			<div className='row'>
 				{store.Planets && store.Planets.map((planet, index) => (
-					<CardPlanet key={index} name={planet.name} uid={planet.uid} />
+					<CardPlanet key={index} name={planet.name} uid={planet.uid} url={planet.url} />
 				))}
 
 			</div>
