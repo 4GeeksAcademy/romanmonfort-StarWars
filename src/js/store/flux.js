@@ -125,6 +125,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  console.error(err);
 				}
 			  },
+			  SetFavorite: (name)=>{
+				const fav = getStore().Favorites;
+                const newFavorite = { name: name };
+				fav.push(newFavorite)
+
+                  setStore ({Favorites : fav   });
+				  console.log(getStore().Favorites)
+			  },
+
+			  removeFavorite: (name)=>{
+				const fav = getStore().Favorites;
+                const newFavorite = { name: name };
+				fav.push(newFavorite)
+
+                  setStore ({Favorites : fav   });
+				  console.log(Favorites)
+			  },
 		}
 	};
 };

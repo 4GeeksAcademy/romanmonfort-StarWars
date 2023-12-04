@@ -13,7 +13,7 @@ const FilmCard = (props) => {
                     <h5 className="card-title text-white">{props.name}</h5>
                 </div>
                 <div className="card-body row d-flex justify-content-between">
-                    <Link className="card-link text-decoration-none col p-0"><button className='Btnt   ms-3'></button></Link>
+                    <Link className="card-link text-decoration-none col p-0"><button className='Btnt ms-3'onClick={() => actions.SetFavorite(props.name)}></button></Link>
                     <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end" to={`/info/films/${props.uid}`}><button onClick={() => actions.getInfo(props.url)} className='BtnM me-3'></button></Link>
                 </div>
             </div>
