@@ -1,3 +1,5 @@
+import { element } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -134,13 +136,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  console.log(getStore().Favorites)
 			  },
 
-			  removeFavorite: (name)=>{
-				const fav = getStore().Favorites;
-                const newFavorite = { name: name };
-				fav.push(newFavorite)
-
-                  setStore ({Favorites : fav   });
-				  console.log(Favorites)
+			  removeFavorite: (index)=>{
+				const fav = getStore().Favorites;			
+                const newFavorite = fav.filter((element, i) => i !== index);				
+                  setStore ({Favorites : newFavorite   });
+				  console.log(getStore().Favorites)
 			  },
 		}
 	};

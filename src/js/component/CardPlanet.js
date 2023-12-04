@@ -15,7 +15,7 @@ const CardPlanet = (props) => {
                     <h5 className="card-title ">{props.name}</h5>
                 </div>
                 <div className="card-body row d-flex justify-content-between">
-                    <Link className="card-link text-decoration-none col p-0"><button className='Btnt '></button></Link>
+                    <Link className="card-link text-decoration-none col p-0"><button className='Btnt 'onClick={() => actions.SetFavorite(props.name)}></button></Link>
                     <Link className="card-link text-decoration-none col p-0 m-o d-flex justify-content-end " to={`/info/planets/${props.uid}`} ><button onClick={() => actions.getInfo(props.url)} className='BtnM '></button></Link>
                 </div>
             </div>

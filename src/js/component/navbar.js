@@ -4,7 +4,7 @@ import "../../styles/home.css";
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
-   const {store} = useContext(Context)
+   const {store,actions} = useContext(Context)
 
 	return (
 		<nav className="navbar navbar-light  mb-3 text-white border solid p-2">
@@ -29,7 +29,7 @@ export const Navbar = () => {
                  <li key={index} >
 					<div className="d-flex row">
 						<div className="col-8"><p>{element.name}</p></div>
-				 <div className="col"> <i className="fa-solid fa-trash m-1" style={{ color: '#0c0d0d' }} onClick={() => handleRemoveFavorite(index)}></i></div>
+				 <div className="col"> <i className="fa-solid fa-trash m-1 border" style={{ color: '#0c0d0d' }} onClick={() => actions.removeFavorite(index)}></i></div>
 				
 					</div>
 			   </li> ))}
