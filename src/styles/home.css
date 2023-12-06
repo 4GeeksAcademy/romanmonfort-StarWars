@@ -157,7 +157,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   }
 
   .img-info{
-    border: lab(from red l a b)
+    border: lab(from rgb(242, 5, 5) l a b)
   }
 
   .descripcion {
